@@ -55,9 +55,6 @@ connected(Vtx1, Vtx3) :-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% :- white(Vtx,N), not included(Vtx).
-% :- black(Vtx,N), not included(Vtx).
-
 % Any white/black Vtx should be included and
 %  - white must be straight
 %  - black must be elbows
