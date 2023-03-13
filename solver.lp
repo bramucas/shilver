@@ -1,3 +1,6 @@
+% White and black vertexes must be included
+included(V) :- white(V).
+included(V) :- black(V).
 
 % Any vertex can be included or not
 {included(vtx(X,Y))} :- vtx(X,Y).
@@ -50,17 +53,10 @@ connected(Vtx1, Vtx3) :-
 % % Any selected edge must be connected with the rest
 :- included(Vtx1), included(Vtx2), Vtx1!=Vtx2, not connected(Vtx1, Vtx2).
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% % Each vertex has to have exactly two incoming edges
-% % In other words, it should be connected with just two vertex
-% :- 2!=#count{DirectlyConnected: undirected_edge(Vtx, DirectlyConnected)}, included(Vtx).
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-:- white(Vtx,N), not included(Vtx).
-:- black(Vtx,N), not included(Vtx).
+% :- white(Vtx,N), not included(Vtx).
+% :- black(Vtx,N), not included(Vtx).
 
 % Any white/black Vtx should be included and
 %  - white must be straight

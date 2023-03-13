@@ -13,3 +13,8 @@ adyacent(vtx(X1, Y1), vtx(X2, Y2)) :- % Horizontal
     Y1=Y2, X1!=X2,            % Same column, but different
     Distance=X1-X2,           % Distance in X coordinate abs(X1, X2) <= 1
     Distance>=-1, Distance<=1.
+
+
+% Some alias
+white(V) :- white(V,N).
+black(V) :- black(V,N).
